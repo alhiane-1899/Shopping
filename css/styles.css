@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .heading {
     position: relative;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     text-align: center;
     font-size: 2rem;
     letter-spacing: 1px;
@@ -280,3 +280,108 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
 }
 /* end section starts */
+/* products section starts */
+.products {
+    padding: 3rem 0 0;
+}
+.products .heading {
+    color: var(--secondary-clr);
+}
+.products .heading::after {
+    width: 5rem;
+    background-color: var(--primary-clr);
+}
+.products-container {
+    padding-bottom: 3rem;
+}
+.products-container > h3 {
+    font-size: 2rem;
+    color: var(--primary-clr);
+    padding-left: 3rem;
+    margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+    .products-container > h3 {
+        padding-left: 0;
+        text-align: center;
+    }
+}
+.products-container .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 1.5rem;
+}
+.product {
+    position: relative;
+    overflow: hidden;
+    border-radius: .3rem;
+    box-shadow: 0 0 .3rem rgba(0, 0 , 0, .3);
+}
+.product .product-img {
+    height: 350px;
+}
+.product .product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.product .content {
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+}
+.product .product-name {
+    font-size: 1.5rem;
+    color: var(--secondary-clr);
+    margin-bottom: .5rem;
+}
+.product .prodcut-price {
+    font-size: 1.25rem;
+    color: var(--primary-clr);
+}
+.product .product-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem 1.25rem;
+    background-color: var(--black-clr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: scale(0);
+    visibility: hidden;
+}
+.product:hover .product-info {
+    transform: scale(1);
+    visibility: visible;
+}
+.product-title {
+    font-size: 2rem;
+    color: var(--white-clr);
+    margin-bottom: .5rem;
+}
+.product-desc {
+    margin-bottom: 1rem;
+}
+.share-product {
+    margin-top: 1.5rem;
+}
+.share-product a {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    margin: 0 7px;
+    background-color: #eee;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-clr);
+}
+.share-product a:hover {
+    background-color: var(--primary-clr);
+    color: var(--white-clr);
+}
+/* products section ends */
