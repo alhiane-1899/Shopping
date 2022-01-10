@@ -501,6 +501,11 @@ h1, h2, h3, h4, h5, h6 {
 .deal-img {
     width: 30vw;
 }
+@media screen and (max-width: 768px) {
+    .deal-text {
+        text-align: center;
+    }
+}
 .deal-name {
     font-size: 2rem;
     font-weight: 600;
@@ -521,4 +526,46 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--white-clr);
     margin-bottom: 1rem;
 }
+.deal .btn:hover {
+    background-color: var(--black-clr);
+    letter-spacing: 1px;
+}
 /* deal section ends */
+/* newsletter section starts */
+.newsletter {
+    padding: 3rem 0;
+    background-color: #9999FF;
+    text-align: center;
+}
+.newsletter .sec-title {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: var(--white-clr);
+}
+.newsletter-desc {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: var(--white-clr);
+}
+.newsletter-form {
+    width: 100%;
+    max-width: 25rem;
+    margin: 1rem auto 0;
+}
+.newsletter-form input {
+    width: 100%;
+    padding-left: 15px;
+    height: 40px;
+    border-radius: 5rem;
+    background-color: var(--black-clr);
+    color: var(--white-clr);
+    margin-bottom: 1rem;
+}
+.newsletter-form .btn {
+    background-color: var(--primary-clr);
+}
+.newsletter-form .btn:hover {
+    background-color: var(--black-clr);
+    letter-spacing: 1px;
+}
+/* newsletter section ends */
