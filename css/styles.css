@@ -27,6 +27,7 @@ html {
     color: var(--white-clr);
 }
 body {
+    height: 1000px;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
@@ -66,6 +67,7 @@ ul {
 }
 p {
     color: var(--text-clr);
+    line-height: 1.7;
 }
 img {
     max-width: 100%;
@@ -75,10 +77,9 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
 }
 .btn {
-    margin: 3rem;
     width: 160px;
     height: 40px;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     border-radius: 5rem;
@@ -153,20 +154,23 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 15px;
 }
 .header-form:hover input,
-.header-form input:focus {
+.header-form input:focus,
+.header-form input:not(:placeholder-shown) {
     width: 10rem;
 }
 .header-form input::placeholder {
     color: transparent;
 }
 .header-form:hover input::placeholder,
-.header-form input:focus::placeholder {
+.header-form input:focus::placeholder,
+.header-form input:not(:placeholder-shown) {
     color: #666;
 }
 .search-icon {
     position: absolute;
-    top: 6px;
-    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 7px;
     color: var(--black-clr);
 }
 /* header section starts */
@@ -221,3 +225,58 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--white-clr);;
 }
 /* sidebar ends */
+/* home section starts */
+.home {
+    position: relative;
+    min-height: 100vh;
+    padding: 7rem 1rem 5rem;
+    background-color: var(--black-clr);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+@media screen and (max-width: 800px) {
+    .home {
+        flex-direction: column;
+    }
+}
+.watch-img {
+    flex: 0 0 40%;
+    width: 40vw;
+}
+@media screen and (max-width: 576px) {
+    .watch-img {
+        width: 60vw;
+    }
+}
+.text-content {
+    flex: 0 0 50%;
+}
+@media screen and (max-width: 800px) {
+    .watch-img {
+        order: 1;
+    }
+    .text-content {
+        order: 2;
+        text-align: center;
+    }
+}
+.text-content h1 {
+    font-size: 2.5rem;
+    color: var(--white-clr);
+    margin-bottom: .5rem;
+}
+.watch-stars {
+    margin: .75rem 0;
+}
+.watch-stars i {
+    color: gold;
+}
+.watch-price {
+    font-size: 2rem;
+    color: var(--primary-clr);
+    margin-bottom: 1rem;
+}
+/* end section starts */
