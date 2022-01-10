@@ -20,6 +20,7 @@ html {
     --secondary-clr: #4834D4;
     --white-clr: #ffffff;
     --text-clr: #cccccc;
+    --black-clr: #333333;
 }
 ::selection {
     background-color: var(--primary-clr);
@@ -105,3 +106,118 @@ h1, h2, h3, h4, h5, h6 {
     height: .2rem;
 }
 /* end basic rules */
+/* header inputs starts */
+#open-nav-input,
+#close-nav-input {
+    display: none;
+}
+#open-nav-input:checked ~ .overlay {
+    opacity: 1;
+    visibility: visible;
+}
+#open-nav-input:checked ~ .overlay .sidebar {
+    transform: translateX(0);
+}
+/* header inputs ends */
+/* header section starts */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    padding: .75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-clr);
+}
+.open-nav-btn {
+    font-size: 1.25rem;
+    color: var(--white-clr);
+    cursor: pointer;
+}
+.brand {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--white-clr);
+    letter-spacing: 1px;
+}
+.header-form {
+    position: relative;
+}
+.header-form input {
+    width: 30px;
+    height: 30px;
+    border-radius: 5rem;
+    padding-left: 15px;
+}
+.header-form:hover input,
+.header-form input:focus {
+    width: 10rem;
+}
+.header-form input::placeholder {
+    color: transparent;
+}
+.header-form:hover input::placeholder,
+.header-form input:focus::placeholder {
+    color: #666;
+}
+.search-icon {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    color: var(--black-clr);
+}
+/* header section starts */
+/* sidebar starts */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+}
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    width: 100%;
+    max-width: 20rem;
+    height: 100vh;
+    padding: 5rem 1rem 1rem;
+    display: flex;
+    align-items: center;
+    background-color: #222;
+    transform: translateX(-100%);
+}
+.close-nav-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: var(--white-clr);
+    cursor: pointer;
+}
+.navbar {
+    width: 100%;
+}
+.navbar a {
+    display: block;
+    padding: 10px 25px;
+    background-color: var(--white-clr);
+    border-radius: 30px;
+    margin: 15px 0;
+    text-align: center;
+    color: var(--black-clr);
+}
+.navbar a:hover {
+    background-color: var(--primary-clr);
+    color: var(--white-clr);;
+}
+/* sidebar ends */

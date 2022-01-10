@@ -9,6 +9,40 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    
+    <!-- header inputs starts -->
+    <input type="radio" name="samename" id="open-nav-input">
+    <input type="radio" name="samename" id="close-nav-input">
+    <!-- header inputs ends -->
+    <!-- header section starts -->
+    <header class="header">
+        <label for="open-nav-input" class="open-nav-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="#" class="brand">
+            <i class="fas fa-shopping-bag"></i>
+            Shopping
+        </a>
+        <form class="header-form">
+            <input type="text" placeholder="Search">
+            <a href="#" class="search-icon fas fa-search"></a>
+        </form>
+    </header>
+    <!-- header section ends -->
+    <!-- sidebar starts -->
+    <div class="overlay">
+        <aside class="sidebar">
+            <label for="close-nav-input" class="close-nav-btn">
+                <i class="fas fa-times"></i>
+            </label>
+            <nav class="navbar">
+                <a href="#">Home</a>
+                <a href="#">Products</a>
+                <a href="#">Reviews</a>
+                <a href="#">Offer</a>
+                <a href="#">Newsletter</a>
+            </nav>
+        </aside>
+    </div>
+    <!-- sidebar ends -->
 </body>
 </html>
