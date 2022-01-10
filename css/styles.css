@@ -2,8 +2,8 @@
 html {
     -webkit-scroll-behavior: smooth;
     scroll-behavior: smooth;
-    -webkit-scroll-padding-top: 4rem;
-    scroll-padding-top: 4rem;
+    -webkit-scroll-padding-top: 3rem;
+    scroll-padding-top: 3rem;
 }
 * {
     margin: 0;
