@@ -468,7 +468,7 @@ h1, h2, h3, h4, h5, h6 {
 .offer .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    grid-gap: 2.5rem 1.5rem;
+    grid-gap: 3rem 1.5rem;
 }
 .offer-box img {
     display: flex;
@@ -531,6 +531,16 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 1px;
 }
 /* deal section ends */
+/* brands section starts */
+.brands {
+    padding: 3rem 0;
+}
+.brands .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 3rem 1.5rem;
+}
+/* brands section ends */
 /* newsletter section starts */
 .newsletter {
     padding: 3rem 0;
