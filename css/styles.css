@@ -27,7 +27,6 @@ html {
     color: var(--white-clr);
 }
 body {
-    height: 1000vh;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
@@ -579,3 +578,45 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 1px;
 }
 /* newsletter section ends */
+/* footer section starts */
+footer {
+    padding: 2rem 0;
+    background-color: var(--black-clr);
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 3rem 1.5rem;
+}
+.foot {
+    text-align: center;
+}
+.foot h3 {
+    font-size: 1.5rem;
+    color: var(--white-clr);
+    margin-bottom: 1rem;
+}
+.foot p {
+    font-size: 14px;
+}
+.foot .links li a {
+    display: block;
+    padding-bottom: 8px;
+    font-size: 14px;
+    color: var(--text-clr);
+}
+.foot .links li a:hover {
+    text-decoration: underline;
+}
+.credit {
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid #eee;
+    display: block;
+    text-align: center;
+    color: var(--text-clr);
+}
+.credit span {
+    color: var(--primary-clr);
+}
+/* footer section ends */
