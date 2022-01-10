@@ -192,7 +192,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     z-index: 999999;
     width: 100%;
-    max-width: 20rem;
+    max-width: 23.5rem;
     height: 100vh;
     padding: 5rem 1rem 1rem;
     display: flex;
@@ -397,18 +397,30 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--white-clr);
 }
 .review {
+    position: relative;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-end;
     gap: 1.5rem;
 }
+@media screen and (max-width: 768px) {
+    .review {
+        margin-top: calc(2rem + 55px);
+    }
+}
 .review-writer-info {
     flex: 0 0 30rem;
+    max-width: 100%;
     padding: 1.5rem 1rem;
     background-color: var(--white-clr);
     border-radius: .3rem .3rem 0 5rem;
 }
+@media screen and (max-width: 768px) {
+    .review-writer-info {
+        padding-top: 65px;
+    }
+} 
 .review-writer-info p {
     color: var(--black-clr);
 }
@@ -429,8 +441,43 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 50% 50% 50% 0;
     border: .3rem solid var(--primary-clr);
 }
+@media screen and (max-width: 768px) {
+    .review-writer-pic {
+        position: absolute;
+        top: -50px;
+        border-radius: 50%;
+        border-color: var(--white-clr);
+    }
+}
 .review-writer-pic img {
     width: 100%;
     height: 100%;
 }
 /* reviews section ends */
+/* offer section starts */
+.offer {
+    padding: 3rem 0;
+}
+.offer .heading {
+    color: var(--secondary-clr);
+}
+.offer .heading::after {
+    background-color: var(--primary-clr);
+}
+.offer .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 2.5rem 1.5rem;
+}
+.offer-box img {
+    display: flex;
+    width: 20rem;
+    height: 12rem;
+    margin: 0 auto;
+}
+.offer-box h3 {
+    text-align: center;
+    font-size: 1.25rem;
+    color: var(--primary-clr);
+}
+/* offer section ends */
